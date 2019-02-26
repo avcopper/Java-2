@@ -39,9 +39,6 @@ public class AppLauncher {
         float[] arr1 = new float[SIZE];
         float[] arr2 = new float[SIZE];
 
-        fillArray(arr1);
-        fillArray(arr2);
-
         singleThreat(arr1);
         multiThreat(arr2);
     }
@@ -74,6 +71,7 @@ public class AppLauncher {
      */
     private static void singleThreat(float[] array)
     {
+        fillArray(array);
         long time = System.currentTimeMillis();
         calculate(array);
         System.out.println(System.currentTimeMillis() - time);
@@ -85,6 +83,7 @@ public class AppLauncher {
      */
     private static void multiThreat(float[] array)
     {
+        fillArray(array);
         long time = System.currentTimeMillis();
 
         float[] a1 = new float[H];
