@@ -17,11 +17,11 @@ class Server {
             System.out.println("Can't open port 1234");
             System.exit(1);
         }
-        System.out.println("=== lesson6.Server started. Waiting for a client... ===");
+        System.out.println("=== Server started. Waiting for a client... ===");
 
         try {
             socket = serverSocket.accept();
-            System.out.println("=== lesson6.Client connected ===");
+            System.out.println("=== Client connected ===");
 
             in  = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(),true);

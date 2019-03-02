@@ -40,7 +40,7 @@ class Client {
      * @param msg - сообщение
      */
     void writeToConsole(String msg) {
-        System.out.println("lesson6.Server: " + msg);
+        System.out.println("Server: " + msg);
     }
 
     /**

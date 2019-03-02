@@ -5,7 +5,7 @@ import java.io.IOException;
 public class ClientLauncher {
     public static void main(String[] args) throws IOException {
         Client client = new Client();
-        System.out.println("=== lesson6.Client started. Connecting to localhost: 1234 ===");
+        System.out.println("=== Client started. Connecting to localhost: 1234 ===");
 
         // В отдельном потоке производим чтение входящего потока и выводим его в консоль
         new Thread() {
@@ -17,7 +17,7 @@ public class ClientLauncher {
 
                         if (message != null) {
                             if (message.equalsIgnoreCase("exit") || message.equalsIgnoreCase("quit")) {
-                                System.out.println("\n === lesson6.Server is disconnected ===");
+                                System.out.println("\n === Server is disconnected ===");
                                 client.close();
                             }
 

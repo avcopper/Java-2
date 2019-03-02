@@ -17,7 +17,7 @@ public class ServerLauncher {
                         if (message != null) {
                             if (message.equalsIgnoreCase("exit") || message.equalsIgnoreCase("quit"))
                             {
-                                System.out.println("\n === lesson6.Client is disconnected ===");
+                                System.out.println("\n === Client is disconnected ===");
                                 Thread.sleep(2000);
                                 server.close();
                             }
