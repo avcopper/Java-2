@@ -41,14 +41,16 @@ public class ClientHandler implements Runnable {
                         break;
                     }
 
-                    for (ClientHandler user : users) {
-                        if (message.startsWith("/" + user)) {
-                            String[] msg = message.split(" ", 2);
-                            user.sendMessage(msg[1]);
-                        } else {
-                            System.out.println(message);
-                            server.broadcastMessage(message);
+                    if (message.startsWith("/")) {
+                        for (ClientHandler user : users) {
+                            if (message.startsWith("/" + user)) {
+                                String[] msg = message.split(" ", 2);
+                                user.sendMessage(msg[1]);
+                            }
                         }
+                    } else {
+                        System.out.println(message);
+                        server.broadcastMessage(message);
                     }
                 }
             }
