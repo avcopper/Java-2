@@ -43,7 +43,7 @@ public class ClientHandler implements Runnable {
 
                     if (message.startsWith("/")) {
                         for (ClientHandler user : users) {
-                            if (message.startsWith("/" + user)) {
+                            if (message.startsWith("/" + user.getName())) {
                                 String[] msg = message.split(" ", 2);
                                 user.sendMessage(msg[1]);
                             }
